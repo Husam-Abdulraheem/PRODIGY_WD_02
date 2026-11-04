@@ -176,17 +176,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   updateSoundButton();
 
-  // Multi-Theme Management (8 distinct themes)
-  const themes = ['indigo', 'midnight', 'emerald', 'crimson', 'amber', 'amethyst', 'cyan', 'light'];
+  // Multi-Theme Management (Light & Dark Theme Collections)
+  const themes = [
+    // Light Themes
+    'light',
+    'light-rose',
+    'light-sage',
+    'light-amber',
+    'light-lavender',
+    'light-ocean',
+    // Dark Themes
+    'indigo',
+    'midnight',
+    'emerald',
+    'crimson',
+    'amber',
+    'amethyst',
+    'cyan',
+  ];
+
   const themeNames = {
-    indigo: 'Cyber Indigo',
-    midnight: 'Midnight OLED',
-    emerald: 'Matrix Emerald',
-    crimson: 'Sunset Crimson',
-    amber: 'Solar Amber',
-    amethyst: 'Neon Amethyst',
-    cyan: 'Ocean Abyss',
-    light: 'Nordic Light',
+    'light': 'Nordic Frost',
+    'light-rose': 'Sakura Rose',
+    'light-sage': 'Sage Emerald',
+    'light-amber': 'Warm Sunlight',
+    'light-lavender': 'Lilac Breeze',
+    'light-ocean': 'Coastal Sky',
+    'indigo': 'Cyber Indigo',
+    'midnight': 'Midnight OLED',
+    'emerald': 'Matrix Emerald',
+    'crimson': 'Sunset Crimson',
+    'amber': 'Solar Amber',
+    'amethyst': 'Neon Amethyst',
+    'cyan': 'Ocean Abyss',
   };
 
   function updateActiveThemeOption(activeTheme) {

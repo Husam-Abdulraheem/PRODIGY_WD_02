@@ -35,16 +35,23 @@ A modern, high-precision, responsive **Stopwatch Web Application** designed and 
 - **Export CSV**: Generates and downloads a `.csv` file containing lap numbers, formatted split times, formatted overall times, and raw millisecond measurements.
 - **Clear Laps**: Dedicated option to clear lap history without interrupting an ongoing timing session.
 
-### 5. Multi-Theme Glassmorphism UI (8 Distinct Themes)
-- **Cyber Indigo (Default)**: Deep violet and cosmic indigo palette matching the Prodigy InfoTech brand theme.
-- **Midnight OLED**: High-contrast true-black dark mode with vibrant neon emerald and ice blue accents.
-- **Matrix Emerald**: Deep obsidian forest with glowing neon mint and emerald accents.
-- **Sunset Crimson**: Deep velvet noir with fiery crimson and sunset coral highlights.
-- **Solar Amber**: Warm charcoal with radiant amber and solar gold tones.
-- **Neon Amethyst**: Deep cosmic grape with electric purple and fuchsia accents.
-- **Ocean Abyss**: Deep oceanic navy with electric cyan and aqua highlights.
-- **Nordic Light**: Clean, frosted minimalist aesthetic for bright environments.
-- Interactive dropdown selector and keyboard cycling (<kbd>T</kbd>) with automatic `localStorage` persistence.
+### 5. Multi-Theme Glassmorphism UI (Light & Dark Collections)
+- **Light Themes**:
+  - **Nordic Frost**: Crisp, frosted minimalist white with royal blue accents.
+  - **Sakura Rose**: Warm porcelain blush with vibrant rose-pink and sunset coral.
+  - **Sage Emerald**: Botanical crisp green with fresh jade and mint highlights.
+  - **Warm Sunlight**: Gentle cream amber with golden honey and warm espresso tones.
+  - **Lilac Breeze**: Soft pastel lavender with electric violet and lilac accents.
+  - **Coastal Sky**: Bright ice-blue with vivid ocean cyan and deep navy contrast.
+- **Dark Themes**:
+  - **Cyber Indigo (Default)**: Deep cosmic violet matching the Prodigy InfoTech brand.
+  - **Midnight OLED**: High-contrast pitch black with neon emerald and glacier blue.
+  - **Matrix Emerald**: Deep obsidian forest with glowing neon mint.
+  - **Sunset Crimson**: Velvet noir with fiery crimson and sunset orange.
+  - **Solar Amber**: Deep warm charcoal with radiant amber gold.
+  - **Neon Amethyst**: Cosmic plum with electric violet and fuchsia.
+  - **Ocean Abyss**: Deep oceanic navy with electric cyan highlights.
+- Categorized interactive dropdown selector and keyboard cycling (<kbd>T</kbd>) with automatic `localStorage` persistence.
 
 ### 6. Built-in Web Audio API Sound Effects
 - Synthesized audio tones (chimes and clicks for Start, Pause, Lap, and Reset) without external audio file dependencies.
