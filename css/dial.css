@@ -8,8 +8,8 @@
    -------------------------------------------------------------------------- */
 .dial-container {
   position: relative;
-  width: min(340px, 86vw);
-  height: min(340px, 86vw);
+  width: min(390px, 88vw);
+  height: min(390px, 88vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,16 +36,16 @@
   stroke: url(#ringGradient);
   stroke-width: 10;
   stroke-linecap: round;
-  /* 2 * Math.PI * 150 = 942.478 */
-  stroke-dasharray: 942.478;
-  stroke-dashoffset: 942.478;
+  /* 2 * Math.PI * 180 = 1130.973 */
+  stroke-dasharray: 1130.973;
+  stroke-dashoffset: 1130.973;
   /* Crucial: No CSS transition on stroke-dashoffset so it updates at 60fps smoothly without rewinding backwards */
 }
 
 .dial-ticks line {
   stroke: var(--text-dim);
   stroke-width: 2.5;
-  opacity: 0.4;
+  opacity: 0.35;
 }
 
 /* --------------------------------------------------------------------------
@@ -58,6 +58,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  max-width: 82%;
+  width: 100%;
 }
 
 /* Status Indicator Badge: Pure text, NO DOT */
@@ -100,7 +102,7 @@
 .digits-group {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
-  font-size: min(3rem, 8.5vw);
+  font-size: min(2.75rem, 7.6vw);
   font-weight: 700;
   letter-spacing: -0.04em;
   color: var(--text-main);
@@ -120,15 +122,17 @@
 }
 
 .fraction-dot {
-  color: var(--text-dim);
+  color: var(--accent-primary);
   padding: 0 0.05em;
+  opacity: 0.85;
 }
 
 .time-fraction {
   font-size: 0.65em;
-  color: var(--color-cyan);
+  color: var(--accent-primary);
   font-weight: 600;
   min-width: 1.25ch;
+  text-shadow: 0 0 12px var(--ambient-1);
 }
 
 /* Current Lap Split Counter */

@@ -20,12 +20,12 @@
   }
 
   .dial-container {
-    width: min(300px, 88vw);
-    height: min(300px, 88vw);
+    width: min(350px, 92vw);
+    height: min(350px, 92vw);
   }
 
   .digits-group {
-    font-size: min(2.5rem, 8vw);
+    font-size: min(2.35rem, 7.2vw);
   }
 
   .controls-row {

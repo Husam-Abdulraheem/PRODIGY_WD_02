@@ -136,8 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const liveAnnouncer = document.getElementById('liveAnnouncer');
   const toastEl = document.getElementById('toast');
 
-  // Circumference for r=150: 2 * Math.PI * 150 = 942.478
-  const CIRCUMFERENCE = 942.478;
+  // Dynamically compute Circumference from SVG circle radius (r=180 -> 1130.973)
+  const radius = progressCircle?.r?.baseVal?.value || 180;
+  const CIRCUMFERENCE = 2 * Math.PI * radius;
 
   if (progressCircle) {
     progressCircle.style.strokeDasharray = `${CIRCUMFERENCE}`;
