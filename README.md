@@ -36,11 +36,16 @@ A modern, high-precision, responsive **Stopwatch Web Application** designed and 
 - **Export CSV**: Generates and downloads a `.csv` file containing lap numbers, formatted split times, formatted overall times, and raw millisecond measurements.
 - **Clear Laps**: Dedicated option to clear lap history without interrupting an ongoing timing session.
 
-### 5. Multi-Theme Glassmorphism UI
+### 5. Multi-Theme Glassmorphism UI (8 Distinct Themes)
 - **Cyber Indigo (Default)**: Deep violet and cosmic indigo palette matching the Prodigy InfoTech brand theme.
 - **Midnight OLED**: High-contrast true-black dark mode with vibrant neon emerald and ice blue accents.
+- **Matrix Emerald**: Deep obsidian forest with glowing neon mint and emerald accents.
+- **Sunset Crimson**: Deep velvet noir with fiery crimson and sunset coral highlights.
+- **Solar Amber**: Warm charcoal with radiant amber and solar gold tones.
+- **Neon Amethyst**: Deep cosmic grape with electric purple and fuchsia accents.
+- **Ocean Abyss**: Deep oceanic navy with electric cyan and aqua highlights.
 - **Nordic Light**: Clean, frosted minimalist aesthetic for bright environments.
-- Preferences automatically persisted in `localStorage`.
+- Interactive dropdown selector and keyboard cycling (<kbd>T</kbd>) with automatic `localStorage` persistence.
 
 ### 6. Built-in Web Audio API Sound Effects
 - Synthesized audio tones (chimes and clicks for Start, Pause, Lap, and Reset) without external audio file dependencies.
@@ -61,7 +66,7 @@ A modern, high-precision, responsive **Stopwatch Web Application** designed and 
 | <kbd>L</kbd> | Record Lap Time |
 | <kbd>R</kbd> | Reset Stopwatch |
 | <kbd>M</kbd> | Toggle Sound Effects (Mute / Unmute) |
-| <kbd>T</kbd> | Switch Theme (Indigo &rarr; Midnight &rarr; Light) |
+| <kbd>T</kbd> | Switch Theme (Cycles across 8 distinct color themes) |
 | <kbd>C</kbd> | Copy Laps to Clipboard |
 | <kbd>?</kbd> | Open Keyboard Shortcuts Modal |
 | <kbd>Esc</kbd> | Close Modal |
