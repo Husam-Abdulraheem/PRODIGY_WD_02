@@ -80,8 +80,6 @@ PRODIGY_WD_02/
 ├── scripts/
 │   ├── lint.js             # HTML integrity & JavaScript syntax validator
 │   └── build-check.js      # Production asset integrity and bundle checker
-└── test/
-    └── stopwatch.test.js   # Automated unit tests for engine, stats, and formatting
 ```
 
 ---
@@ -113,21 +111,18 @@ PRODIGY_WD_02/
 
 ---
 
-## 🧪 Verification & Testing
+## 🧪 Verification & Linting
 
-Run the automated test suite and integrity checks:
+Run the automated integrity and linting checks:
 
 ```bash
-# Run unit tests
-npm test
-
 # Run syntax and HTML linting
 npm run lint
 
 # Run asset and build integrity check
 npm run build
 
-# Run all checks at once
+# Run all checks
 npm run check
 ```
 

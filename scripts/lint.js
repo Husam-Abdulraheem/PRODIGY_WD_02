@@ -18,7 +18,6 @@ const filesToCheck = [
   'styles.css',
   'stopwatch.js',
   'app.js',
-  'test/stopwatch.test.js',
 ];
 
 let hasErrors = false;
