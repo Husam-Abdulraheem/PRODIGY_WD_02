@@ -5,7 +5,6 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![License](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)
 
 A modern, high-precision, responsive **Stopwatch Web Application** designed and implemented using semantic **HTML5**, modern **CSS3**, and modular **JavaScript (ES6+)**. Engineered with monotonic high-resolution timestamps, fluid SVG dial animations, comprehensive lap analytics, Web Audio API sound synthesis, and full keyboard accessibility.
 
@@ -138,9 +137,3 @@ npm run check
 **Husam Abdulraheem**
 - GitHub: [@Husam-Abdulraheem](https://github.com/Husam-Abdulraheem)
 - Internship Track: Prodigy InfoTech — Web Development
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
