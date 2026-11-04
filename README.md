@@ -1,3 +1,146 @@
-# PRODIGY_WD_02
+# Prodigy InfoTech — Web Development Internship
+## Task 02: Precision Stopwatch Web Application
 
-Stopwatch Web Application
+![Prodigy InfoTech Task-02](https://img.shields.io/badge/PRODIGY__WD__02-Task--02-6366f1?style=for-the-badge&logo=target)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)
+
+A modern, high-precision, responsive **Stopwatch Web Application** designed and implemented using semantic **HTML5**, modern **CSS3**, and modular **JavaScript (ES6+)**. Engineered with monotonic high-resolution timestamps, fluid SVG dial animations, comprehensive lap analytics, Web Audio API sound synthesis, and full keyboard accessibility.
+
+---
+
+## 🌟 Key Features
+
+### 1. High-Precision Monotonic Engine
+- Powered by `performance.now()` with millisecond and centisecond accuracy.
+- **Drift-proof**: Eliminates interval lag and timer drift caused by browser thread throttling and background tab suspension through hybrid animation frame (`requestAnimationFrame`) and background heartbeat updates.
+
+### 2. Interactive SVG Dial & Digital Readout
+- Animated circular progress ring with radial glow stroke (`stroke-dasharray` and `stroke-dashoffset`) cycling smoothly every 60 seconds.
+- Non-jittering digital time readout using tabular figures (`font-variant-numeric: tabular-nums`) displaying `HH:MM:SS.cs` (Hours, Minutes, Seconds, and Centiseconds).
+- Real-time current lap split counter displaying active lap duration alongside total elapsed time.
+
+### 3. Lap Tracking & Statistical Analysis
+- **Split & Cumulative Timing**: Records individual lap split duration, overall elapsed time, and split delta compared to the previous lap.
+- **Smart Badges**: Dynamically identifies and highlights the **Fastest Lap** (emerald green badge) and **Slowest Lap** (amber badge).
+- **Statistical Summary Grid**: Real-time cards calculating:
+  - Total Laps Recorded
+  - Fastest Lap time & ID
+  - Slowest Lap time & ID
+  - Average Lap duration across all intervals
+
+### 4. Data Export & Utilities
+- **Copy to Clipboard**: Formats recorded laps into an aligned tabular text summary ready to paste into notes or spreadsheets.
+- **Export CSV**: Generates and downloads a `.csv` file containing lap numbers, formatted split times, formatted overall times, and raw millisecond measurements.
+- **Clear Laps**: Dedicated option to clear lap history without interrupting an ongoing timing session.
+
+### 5. Multi-Theme Glassmorphism UI
+- **Cyber Indigo (Default)**: Deep violet and cosmic indigo palette matching the Prodigy InfoTech brand theme.
+- **Midnight OLED**: High-contrast true-black dark mode with vibrant neon emerald and ice blue accents.
+- **Nordic Light**: Clean, frosted minimalist aesthetic for bright environments.
+- Preferences automatically persisted in `localStorage`.
+
+### 6. Built-in Web Audio API Sound Effects
+- Synthesized audio tones (chimes and clicks for Start, Pause, Lap, and Reset) without external audio file dependencies.
+- Toggleable sound mute button with persistent state and status announcements.
+
+### 7. Accessibility (A11y) & Screen Reader Support
+- Semantic HTML elements (`<main>`, `<section>`, `<header>`, `<footer>`, `<dialog>`, `<button>`).
+- Dedicated `aria-live="polite"` live announcer to notify screen reader users of critical state changes (Start, Pause, Lap, Reset) without flooding them on every high-frequency millisecond tick.
+- High-contrast `:focus-visible` navigation outlines.
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+| :--- | :--- |
+| <kbd>Space</kbd> or <kbd>Enter</kbd> | Start / Pause / Resume Stopwatch |
+| <kbd>L</kbd> | Record Lap Time |
+| <kbd>R</kbd> | Reset Stopwatch |
+| <kbd>M</kbd> | Toggle Sound Effects (Mute / Unmute) |
+| <kbd>T</kbd> | Switch Theme (Indigo &rarr; Midnight &rarr; Light) |
+| <kbd>C</kbd> | Copy Laps to Clipboard |
+| <kbd>?</kbd> | Open Keyboard Shortcuts Modal |
+| <kbd>Esc</kbd> | Close Modal |
+
+---
+
+## 📁 Repository Structure
+
+```
+PRODIGY_WD_02/
+├── index.html              # Main semantic HTML5 markup & dialog modal
+├── styles.css              # Custom properties, glassmorphism, themes & responsive layouts
+├── app.js                  # DOM controller, Web Audio synthesis, and UI event listeners
+├── stopwatch.js            # Pure stopwatch timing engine, statistics & CSV export logic
+├── package.json            # Node.js configuration and verification scripts
+├── scripts/
+│   ├── lint.js             # HTML integrity & JavaScript syntax validator
+│   └── build-check.js      # Production asset integrity and bundle checker
+└── test/
+    └── stopwatch.test.js   # Automated unit tests for engine, stats, and formatting
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Any modern web browser (Google Chrome, Firefox, Safari, Microsoft Edge).
+- (Optional for running tests) Node.js v18 or higher.
+
+### Running Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Husam-Abdulraheem/PRODIGY_WD_02.git
+   cd PRODIGY_WD_02
+   ```
+
+2. Open `index.html` directly in your browser:
+   ```bash
+   # On Linux:
+   xdg-open index.html
+
+   # On macOS:
+   open index.html
+
+   # Or serve with any static server:
+   npx serve .
+   ```
+
+---
+
+## 🧪 Verification & Testing
+
+Run the automated test suite and integrity checks:
+
+```bash
+# Run unit tests
+npm test
+
+# Run syntax and HTML linting
+npm run lint
+
+# Run asset and build integrity check
+npm run build
+
+# Run all checks at once
+npm run check
+```
+
+---
+
+## 👨‍💻 Author
+
+**Husam Abdulraheem**
+- GitHub: [@Husam-Abdulraheem](https://github.com/Husam-Abdulraheem)
+- Internship Track: Prodigy InfoTech — Web Development
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).

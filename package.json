@@ -1,0 +1,24 @@
+{
+  "name": "prodigy_wd_02",
+  "version": "1.0.0",
+  "description": "Interactive and accessible Stopwatch Web Application built with HTML, CSS, and modern JavaScript for Prodigy InfoTech internship Task-02.",
+  "type": "module",
+  "scripts": {
+    "lint": "node ./scripts/lint.js",
+    "test": "node --test test/*.test.js",
+    "build": "node ./scripts/build-check.js",
+    "check": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "stopwatch",
+    "timer",
+    "lap-timer",
+    "javascript",
+    "html5",
+    "css3",
+    "web-audio-api",
+    "prodigy-infotech"
+  ],
+  "author": "Husam Abdulraheem",
+  "license": "MIT"
+}
