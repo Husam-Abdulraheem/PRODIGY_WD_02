@@ -98,8 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusBadge = document.getElementById('statusBadge');
   const statusText = document.getElementById('statusText');
   const progressCircle = document.getElementById('progressCircle');
-  const baseCycleCircle = document.getElementById('baseCycleCircle');
-  const beaconGroup = document.getElementById('beaconGroup');
 
   // DOM Elements: Controls
   const startPauseBtn = document.getElementById('startPauseBtn');
@@ -138,16 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const liveAnnouncer = document.getElementById('liveAnnouncer');
   const toastEl = document.getElementById('toast');
 
-  // Circumference for r=165: 2 * Math.PI * 165 = 1036.72557
-  const CIRCUMFERENCE = 1036.72557;
+  // Circumference for r=150: 2 * Math.PI * 150 = 942.478
+  const CIRCUMFERENCE = 942.478;
 
   if (progressCircle) {
     progressCircle.style.strokeDasharray = `${CIRCUMFERENCE}`;
     progressCircle.style.strokeDashoffset = `${CIRCUMFERENCE}`;
-  }
-  if (baseCycleCircle) {
-    baseCycleCircle.style.strokeDasharray = `${CIRCUMFERENCE}`;
-    baseCycleCircle.style.strokeDashoffset = `${CIRCUMFERENCE}`;
   }
 
   // Toast Timer Reference
@@ -266,34 +260,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const lapTimeObj = formatTime(currentLapDuration, false);
       currentLapSplitEl.textContent = lapTimeObj.formatted;
 
-      // Multi-cycle Smooth Continuous Ring Animation:
-      // 1. Continuous beacon angle keeps rotating forward without rewinding (0deg -> 360deg -> 720deg...)
-      const continuousDeg = (elapsedMs / 60000) * 360;
-      if (beaconGroup) {
-        beaconGroup.style.transform = `rotate(${continuousDeg}deg)`;
-      }
-
-      // 2. Cycle-based dual layer stroke animation
-      const currentCycle = Math.floor(elapsedMs / 60000);
-      const cycleProgress = (elapsedMs % 60000) / 60000;
-      const offset = CIRCUMFERENCE * (1 - cycleProgress);
-
-      if (currentCycle === 0) {
-        // Cycle 1 (0 to 60s): Base circle hidden, active circle sweeps 0 to 100%
-        if (baseCycleCircle) {
-          baseCycleCircle.style.strokeDashoffset = `${CIRCUMFERENCE}`;
-        }
-        progressCircle.style.stroke = 'url(#ringGradient)';
-        progressCircle.style.strokeDashoffset = `${offset}`;
-      } else {
-        // Cycle 2+ (60s+): Base circle stays completely filled with previous cycle's gradient.
-        // Active circle continues sweeping over it from 12 o'clock with vibrant cycle-2 gradient!
-        // This ensures the ring NEVER rewinds or becomes empty!
-        if (baseCycleCircle) {
-          baseCycleCircle.style.stroke = 'url(#ringGradient)';
-          baseCycleCircle.style.strokeDashoffset = '0';
-        }
-        progressCircle.style.stroke = 'url(#cycle2Gradient)';
+      // Smooth Circle Progress (0 to 60s cycle, updates each frame without rewinding backwards)
+      const cycleFraction = (elapsedMs % 60000) / 60000;
+      const offset = CIRCUMFERENCE * (1 - cycleFraction);
+      if (progressCircle) {
         progressCircle.style.strokeDashoffset = `${offset}`;
       }
     },
@@ -352,16 +322,9 @@ document.addEventListener('DOMContentLoaded', () => {
       lapBtn.disabled = true;
       resetBtn.disabled = true;
 
-      // Reset dial rings and beacon head
-      if (baseCycleCircle) {
-        baseCycleCircle.style.strokeDashoffset = `${CIRCUMFERENCE}`;
-      }
+      // Reset dial ring
       if (progressCircle) {
-        progressCircle.style.stroke = 'url(#ringGradient)';
         progressCircle.style.strokeDashoffset = `${CIRCUMFERENCE}`;
-      }
-      if (beaconGroup) {
-        beaconGroup.style.transform = 'rotate(0deg)';
       }
 
       currentLapSplitEl.textContent = '00:00.00';
