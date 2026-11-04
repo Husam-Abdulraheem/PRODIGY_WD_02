@@ -84,12 +84,18 @@ A modern, high-precision, responsive **Stopwatch Web Application** designed and 
 ```
 PRODIGY_WD_02/
 ├── index.html              # Main semantic HTML5 markup & dialog modal
-├── styles.css              # Custom properties, glassmorphism, themes & responsive layouts
+├── styles.css              # Master stylesheet entrypoint importing modular CSS
+├── css/
+│   ├── themes.css          # Design tokens & 13 color themes (6 Light & 7 Dark)
+│   ├── base.css            # Reset, typography, ambient lighting & base layout
+│   ├── dial.css            # Circular SVG progress ring & digital time readout
+│   ├── components.css      # Header, theme menu, controls, stats, laps & modal
+│   └── responsive.css      # Fluid mobile and tablet responsive media queries
 ├── app.js                  # DOM controller, Web Audio synthesis, and UI event listeners
 ├── stopwatch.js            # Pure stopwatch timing engine, statistics & CSV export logic
 ├── package.json            # Node.js configuration and verification scripts
 ├── scripts/
-│   ├── lint.js             # HTML integrity & JavaScript syntax validator
+│   ├── lint.js             # HTML/CSS integrity & JavaScript syntax validator
 │   └── build-check.js      # Production asset integrity and bundle checker
 ```
 
@@ -99,7 +105,7 @@ PRODIGY_WD_02/
 
 ### Prerequisites
 - Any modern web browser (Google Chrome, Firefox, Safari, Microsoft Edge).
-- (Optional for running tests) Node.js v18 or higher.
+- (Optional for running verification checks) Node.js v18 or higher.
 
 ### Running Locally
 1. Clone the repository:

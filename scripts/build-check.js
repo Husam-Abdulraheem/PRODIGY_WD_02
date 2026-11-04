@@ -14,7 +14,12 @@ console.log('📦 Running build and asset integrity check...');
 
 const requiredAssets = [
   { file: 'index.html', minSize: 1000 },
-  { file: 'styles.css', minSize: 2000 },
+  { file: 'styles.css', minSize: 200 },
+  { file: 'css/themes.css', minSize: 2000 },
+  { file: 'css/base.css', minSize: 500 },
+  { file: 'css/dial.css', minSize: 500 },
+  { file: 'css/components.css', minSize: 2000 },
+  { file: 'css/responsive.css', minSize: 300 },
   { file: 'stopwatch.js', minSize: 1000 },
   { file: 'app.js', minSize: 2000 },
   { file: 'README.md', minSize: 500 },

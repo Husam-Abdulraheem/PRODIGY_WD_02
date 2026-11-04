@@ -1,0 +1,156 @@
+/* ==========================================================================
+   PRODIGY_WD_02: Dial & Digital Clock Styles
+   Spacious Circular Progress Ring & High-Precision Digital Time Readout
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Dial Container & Progress Ring
+   -------------------------------------------------------------------------- */
+.dial-container {
+  position: relative;
+  width: min(340px, 86vw);
+  height: min(340px, 86vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring-track {
+  fill: none;
+  stroke: var(--ring-track);
+  stroke-width: 10;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: url(#ringGradient);
+  stroke-width: 10;
+  stroke-linecap: round;
+  /* 2 * Math.PI * 150 = 942.478 */
+  stroke-dasharray: 942.478;
+  stroke-dashoffset: 942.478;
+  /* Crucial: No CSS transition on stroke-dashoffset so it updates at 60fps smoothly without rewinding backwards */
+}
+
+.dial-ticks line {
+  stroke: var(--text-dim);
+  stroke-width: 2.5;
+  opacity: 0.4;
+}
+
+/* --------------------------------------------------------------------------
+   Time Readout (Center of Dial)
+   -------------------------------------------------------------------------- */
+.time-readout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Status Indicator Badge: Pure text, NO DOT */
+.status-indicator-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.85rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.status-indicator-badge.running {
+  border-color: rgba(16, 185, 129, 0.45);
+  background: var(--color-emerald-bg);
+  color: var(--color-emerald);
+}
+
+.status-indicator-badge.paused {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: var(--color-amber-bg);
+  color: var(--color-amber);
+}
+
+/* Digital Display with Tabular Non-Jittering Digits */
+.digital-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.digits-group {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: min(3rem, 8.5vw);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-main);
+  display: flex;
+  align-items: baseline;
+}
+
+.time-unit {
+  min-width: 1.25ch;
+  text-align: center;
+}
+
+.separator {
+  color: var(--text-dim);
+  padding: 0 0.1em;
+  font-weight: 400;
+}
+
+.fraction-dot {
+  color: var(--text-dim);
+  padding: 0 0.05em;
+}
+
+.time-fraction {
+  font-size: 0.65em;
+  color: var(--color-cyan);
+  font-weight: 600;
+  min-width: 1.25ch;
+}
+
+/* Current Lap Split Counter */
+.current-lap-preview {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.lap-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.lap-digits {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}

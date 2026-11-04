@@ -16,6 +16,11 @@ console.log('🔍 Running code lint and syntax checks...');
 const filesToCheck = [
   'index.html',
   'styles.css',
+  'css/themes.css',
+  'css/base.css',
+  'css/dial.css',
+  'css/components.css',
+  'css/responsive.css',
   'stopwatch.js',
   'app.js',
 ];
