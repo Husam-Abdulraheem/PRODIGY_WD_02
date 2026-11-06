@@ -1,12 +1,16 @@
 # Prodigy InfoTech — Web Development Internship
 ## Task 02: Precision Stopwatch Web Application
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-2ea44f?style=for-the-badge&logo=github)](https://husam-abdulraheem.github.io/PRODIGY_WD_02/)
+[![Deploy to GitHub Pages](https://github.com/Husam-Abdulraheem/PRODIGY_WD_02/actions/workflows/deploy.yml/badge.svg)](https://github.com/Husam-Abdulraheem/PRODIGY_WD_02/actions/workflows/deploy.yml)
 ![Prodigy InfoTech Task-02](https://img.shields.io/badge/PRODIGY__WD__02-Task--02-6366f1?style=for-the-badge&logo=target)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 A modern, high-precision, responsive **Stopwatch Web Application** designed and implemented using semantic **HTML5**, modern **CSS3**, and modular **JavaScript (ES6+)**. Engineered with monotonic high-resolution timestamps, fluid SVG dial animations, comprehensive lap analytics, Web Audio API sound synthesis, and full keyboard accessibility.
+
+🌐 **Live URL**: [https://husam-abdulraheem.github.io/PRODIGY_WD_02/](https://husam-abdulraheem.github.io/PRODIGY_WD_02/)
 
 ---
 
